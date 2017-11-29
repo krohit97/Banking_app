@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block head %}
+  <title>Delete Customer</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+{% endblock %}
+
+{% block body%}
+<!--<div class="container" align="center">
+    <form method="post">{% csrf_token%}
+
+        <label><b>Customer ID*</b></label>
+        <br>
+        <input type="number" placeholder="Customer ID" name="customer_id" required>
+        <br>
+
+         <input type="checkbox" checked="checked"> Remember me
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
+       <br>
+
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Submit</button>
+        <br>
+
+    </form>
+</div>-->
+<div class="container" style="size: 20px; margin-top: 20%;">
+    <form style="size: 20px" method="post">{% csrf_token%}
+  <div class="form-group" style="size: 5px;">
+    <label for="exampleInputEmail1">Customer ID</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Customer ID" name="customer_id" maxlength="5" required style="size: 15px;">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

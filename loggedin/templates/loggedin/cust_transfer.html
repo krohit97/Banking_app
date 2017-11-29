@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Transfer</title>
+</head>
+<body>
+
+</body>
+</html>{% extends 'base.html'%}
+
+{% block head %}
+  <title>Customer Transfer</title>
+{% endblock %}
+
+{% block body%}
+<div class="container" align="center">
+    <form method="post">{% csrf_token%}
+        <label><b>Amount to transfer*</b></label>
+        <br>
+        <p>Max Length(9) </p>
+        <input type="number" placeholder="Balance" name="balance" maxlength="9" required>
+        <br>
+
+        <label><b>Your Account number*</b></label>
+        <br>
+        <p>Max Length(7) </p>
+        <input type="number" placeholder="Your Account Number" name="acno" maxlength="7" required>
+        <br>
+
+        <label><b>Password*</b></label>
+        <br>
+        <p>Small/Capital Letters + Special Characters(@*#$)+ Max Length(18) </p>
+        <input type="password" placeholder="Enter Password" name="pswd" maxlength="18" required>
+        <br>
+
+        <label><b>Account number of reciever*</b></label>
+        <br>
+        <p>Small/Capital Letters + Special Characters(@*#$)+ Max Length(18) </p>
+        <input type="number" placeholder="Account" name="accno" maxlength="18" required>
+        <br>
+
+        <!--    <input type="checkbox" checked="checked"> Remember me-->
+    <!--    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+       <br>
+
+          <button type="reset" class="Reset">Reset</button>
+          <button type="submit" class="signupbtn">Submit</button>
+        <br>
+
+    </form>
+</div>
+{% endblock %}</title>
+</head>
+<body>
+</body>
+</html>

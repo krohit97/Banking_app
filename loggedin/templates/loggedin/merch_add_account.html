@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block head %}
+  <title>Merchant Add Account</title>
+{% endblock %}
+
+{% block body%}
+<div class="container" align="center">
+    <form method="post">{% csrf_token%}
+
+        <label><b>Balance*</b></label>
+        <br>
+        <p>Max Length(9) </p>
+        <input type="text" placeholder="Balance" name="balance" maxlength="9" required>
+        <br>
+
+        <label><b>Password*</b></label>
+        <br>
+        <p>Small/Capital Letters + Special Characters(@*#$)+ Max Length(18) </p>
+        <input type="password" placeholder="Enter Password" name="pswd" maxlength="18" required>
+        <br>
+
+        <!--    <input type="checkbox" checked="checked"> Remember me-->
+    <!--    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+       <br>
+
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        <br>
+
+    </form>
+</div>
+{% endblock %}

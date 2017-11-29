@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block head %}
+  <title>OTP Verify</title>
+{% endblock %}
+
+{% block body%}
+<div class="container" align="center">
+    <form method="post">{% csrf_token%}
+        <label><b>Enter OTP</b></label>
+        <br>
+        <input type="text" placeholder="OTP" name="otp" required>
+        <br>
+
+        <!-- <label><b>Password*</b></label>
+        <br>
+        <input type="password" placeholder="Enter Password" name="pswd" required>
+        <br> -->
+
+        <!--    <input type="checkbox" checked="checked"> Remember me-->
+    <!--    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+       <br>
+
+          <button type="reset" class="Reset">Reset</button>
+          <button type="submit" class="signupbtn">Submit</button>
+        <br>
+
+    </form>
+</div>
+{% endblock %}

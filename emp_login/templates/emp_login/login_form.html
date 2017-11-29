@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block head %}
+  <title>Employee Login</title>
+{% endblock %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+{% block body%}
+<h1 align="center">Employee Login</h1>
+<div class="container" style="size: 20px; margin-top: 20%;">
+    <form style="size: 20px" method="post">{% csrf_token%}
+  <div class="form-group">
+    <label for="exampleInputEmail1">User Name</label>
+    <p>Small/Capital Letters + Special Characters(_)+ Max Length(18) </p>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name" name="uname" maxlength="18" required style="size: 15px;">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <p>Small/Capital Letters + Special Characters(@*#$)+ Max Length(18) </p>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="pswd" maxlength="18" required style="size: 15px;">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="/forgotpswd">Forgot Password</a>
+</form>
+</div>
+{% endblock %}
