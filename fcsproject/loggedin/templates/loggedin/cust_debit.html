@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block head %}
+  <title>Customer Debit</title>
+{% endblock %}
+
+{% block body%}
+<div class="container" align="center">
+    <form method="post">{% csrf_token%}
+        <label><b>Amount to debit*</b></label>
+        <br>
+        <input type="number" placeholder="Balance" name="balance" required>
+        <br>
+
+        <label><b>Password*</b></label>
+        <br>
+        <input type="password" placeholder="Enter Password" name="pswd" required>
+        <br>
+
+        <!--    <input type="checkbox" checked="checked"> Remember me-->
+    <!--    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+       <br>
+
+          <button type="reset" class="Reset">Reset</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        <br>
+
+    </form>
+</div>
+{% endblock %}
